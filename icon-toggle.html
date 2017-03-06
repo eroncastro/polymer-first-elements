@@ -11,14 +11,18 @@
       :host {
         display: inline-block;
       }
-
+      /*
+        --my-custom-property is a custom property name starting
+        with two dashes and defaultValue is an CSS value that is used
+        if the custom property is not set.
+      */
       iron-icon {
-        fill: rgba(0, 0, 0, 0);
-        stroke: currentcolor;
+        fill: var(--icon-toggle-color, rgba(0, 0, 0, 0));
+        stroke: var(--icon-togglecurrentcolor, currentcolor);
       }
 
       :host([pressed]) iron-icon {
-        fill: currentcolor;
+        fill: var(--icon-toggle-pressed-color, currentcolor);
       }
     </style>
 
