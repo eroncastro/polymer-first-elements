@@ -38,6 +38,13 @@
           notify: true, // dispatches property change events when the property value changes
           reflectToAttribute: true // tells Polymer to update the corresponding attribute when the property changes
         }
+      },
+      listeners: {
+        'tap': 'toggle'
+      },
+      toggle: function() {
+        this.pressed = !this.pressed;
+        console.log(this.pressed);
       }
     });
   </script>
